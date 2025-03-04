@@ -38,8 +38,8 @@ function translateLatinCharacter(character) {
 }
 
     console.log(translateLatinCharacter('A'));
-    console.log((translateLatinCharacter('T')));
-    console.log((translateLatinCharacter('X')));
+    console.log(translateLatinCharacter('T'));
+    console.log(translateLatinCharacter('X'));
 
 
 function encode (text) {
@@ -51,6 +51,12 @@ function encode (text) {
 console.log(encode('HELLOOO'));
 console.log(encode('VACANCES'));
 console.log(encode(`Le code c'est génial !`));
+
+document.getElementById('translate-button').addEventListener('click', function () {
+    const textArecuperer = document.getElementById('latin-text').value;
+    const morse = encode(textArecuperer);
+    document.getElementById('morse-result').textContent = `Voici ton texte en Morse: "${morse}"`;
+});
 
 // Version plus détaillée de function encode:
 
@@ -68,3 +74,54 @@ console.log(encode(`Le code c'est génial !`));
 // }
 
 // console.log(encode('HELLO'));
+
+
+const morseToLatin = {
+    '-': "T",
+    '--': "M",
+    '---': "O",
+    '--.': "G",
+    '--.-': "Q",
+    '--..': "Z",
+    '-.': "N",
+    '-.-': "K",
+    '-.--': "Y",
+    '-.-.': "C",
+    '-..': "D",
+    '-..-': "X",
+    '-...': "B",
+    '.': "E",
+    '.-': "A",
+    '.--': "W",
+    '.---': "J",
+    '.--.': "P",
+    '.-.': "R",
+    '.-..': "L",
+    '..': "I",
+    '..-': "U",
+    '..-.': "F",
+    '...': "S",
+    '...-': "V",
+    '....': "H"
+  }
+
+ function getMorseCharacterList(text) {
+    return text.split('');
+ }
+
+ console.log(getMorseCharacterList('hola'));
+
+ function translateMorseCharacter(character) {
+    return morseToLatin[character];
+ }
+
+ console.log(translateMorseCharacter('....'));
+ console.log(translateMorseCharacter('-'));
+ console.log(translateMorseCharacter('...-'));
+
+//  function decode (text) {
+//     return text.split(' / ')
+//     .map(character => translateMorseCharacter(character.toUpperCase())
+//     .join('')
+//  );
+

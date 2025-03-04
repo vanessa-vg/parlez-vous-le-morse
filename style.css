@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(231, 234, 246);
+}
+
+h1{
+    padding: 15px;
+    background-color: white;
+    width: 32%;
+    border: none;
+    box-shadow: 0 0 15px rgb(119, 140, 225) ;
+}
+
+#label-text{
+    width: 250px;
+    display: block; /* Force le label à occuper toute la ligne */
+    margin-bottom: 5px; /* Ajoute un petit espace sous le label */
+    font-weight: bold; /* Mets le texte en gras pour plus de visibilité */
+}
+
+#latin-text{
+    display: inline-block;
+    width: 400px;
+    height: 100px;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+}
+
+#morse-result{
+    font-size: 20px;
+    border: 1px solid black;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+}
+
+button{
+    height: 40px;
+    cursor: pointer;
+}

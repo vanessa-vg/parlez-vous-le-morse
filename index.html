@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parlez-vous le morse</title>
     <script defer src="/script.js"></script>
+    <link href="/style.css" rel="stylesheet">
 </head>
 <body>
     <h1>Exercice individuel : Parlez-vous le morse ?</h1>
+
+    <br>
+
+    <div class="form-container">
+    <label for="text" id="label-text">Ecrivez ici votre texte en français :</label>
+    <textarea name ="text" id="latin-text"></textarea>
+    </div>
+
+    <button id="translate-button">Traduire en Morse</button>
+
+    <h2>Résultat :</h2>
+    <p id="morse-result"></p>
 </body>
 </html>
